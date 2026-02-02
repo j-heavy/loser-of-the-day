@@ -108,6 +108,16 @@ bot.onText(/\/pidor/, (msg) => {
   }
 
   if (data.lastDate === today()) {
+    const funnyText = funnyTexts[Math.floor(Math.random() * funnyTexts.length)];
+    const mention = mentionUser(loserId, user.username);
+
+    const message = `🤡 *ПИДОР ДНЯ* 🤡
+
+    ${mention} ${funnyText}
+    `;
+
+bot.sendMessage(msg.chat.id, message, { parse_mode: 'Markdown' });
+
     return bot.sendMessage(msg.chat.id, 'Пидор дня уже выбран 😏');
   }
 
