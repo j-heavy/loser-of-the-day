@@ -6,6 +6,13 @@ const bot = new TelegramBot(token, { polling: true });
 
 const DATA_FILE = './data.json';
 
+bot.setMyCommands([
+  { command: '/reg', description: 'Стать пидором' },
+  { command: '/pidor', description: 'Выбрать пидора дня' },
+  { command: '/rating', description: 'Рейтинг самых пидоров' },
+  { command: '/achievements', description: 'Ачивки пидора' },
+]);
+
 // ---------- funny texts ----------
 const funnyTexts = [
   'Тебе дрочили в зип 🌚',
