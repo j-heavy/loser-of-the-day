@@ -79,7 +79,7 @@ bot.onText(/\/start/, (msg) => {
 });
 
 // /register
-bot.onText(/\/register/, (msg) => {
+bot.onText(/\/reg/, (msg) => {
   const data = loadData();
   const id = msg.from.id;
 
@@ -99,7 +99,7 @@ bot.onText(/\/register/, (msg) => {
 });
 
 // /loser
-bot.onText(/\/loser/, (msg) => {
+bot.onText(/\/pidor/, (msg) => {
   const data = loadData();
   const userIds = Object.keys(data.users);
 
